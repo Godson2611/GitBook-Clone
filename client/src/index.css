@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+  --text-white: white;
+  --text-yellow: rgb(244, 226, 141);
+
+  /* for carousel */
+  --carousel-item-width: 100px;
+  --carousel-item-height: 50px;
+  --carousel-item-quantity: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Host Grotesk", sans-serif;
+  background-size: 100% 100%;
+  background-position: 0px 0px, 0px 0px;
+  background-size: 100% 100%;
+  background-position: 0px 0px, 0px 0px;
+  background-image: radial-gradient(
+      49% 81% at 49% -47%,
+      #ffe20045 0%,
+      #073aff00 100%
+    ),
+    radial-gradient(142% 91% at 111% 84%, #181c1f 0%, #181c1f 100%);
+    /* background-repeat: no-repeat; */
+  width: 100%;
+  height: 100vh;
+}
+
+.content-grid {
+  --padding-inline: 1rem;
+  --content-max-width: 900px;
+  --breakout-max-width: 1200px;
+  --breakout-size: calc(
+    (var(--breakout-max-width) - var(--content-max-width)) / 2
+  );
+
+  display: grid;
+  grid-template-columns:
+    [full-width-start] minmax(var(--padding-inline), 1fr)
+    [breakout-start] minmax(0, var(--breakout-size))
+    [content-start] min(
+      100% - (var(--padding-inline) * 2),
+      var(--content-max-width)
+    )
+    [content-end] minmax(0, var(--breakout-size)) [breakout-end] minmax(
+      var(--padding-inline),
+      1fr
+    )
+    [full-width-end];
+}
+
+.content-grid > :not(.breakout, .full-width),
+.full-width > :not(.breakout, .full-width) {
+  grid-column: content;
+}
+
+.content-grid > .breakout {
+  grid-column: breakout;
+}
+
+.content-grid > .full-width {
+  grid-column: full-width;
+
+  display: grid;
+  grid-template-columns: inherit;
+}
+
+img.logo {
+  width: 10rem;
+}
+
+.text__white {
+  color: var(--text-white);
+}
+
+.text__yellow {
+  color: var(--text-yellow);
+}
+
+.bg__yellow {
+  background-color: rgb(244, 226, 141);
+}
+
+.text__light__blue {
+  color: rgb(187, 221, 229);
+}
+
+.footer__container {
+  background-color: #181c1f;
+}
+
+.publicDocs__container {
+  background-color: #bbdde5;
+  height: 100vh;
+}
+
+.internalDocs__container {
+  background-color: #f4e28d;
+  height: 100vh;
+}
+
+.gitSYNC__container {
+  background-color: #fda599;
+  height: 100vh;
+}
+
+.gitBookAI__container {
+  background-color: #f2f0ff;
+  height: 100vh;
+}
+
+.visitor__container {
+  background-color: #3f89a1;
+  height: 100vh;
+}
+
+.integrations__container {
+  background-size: 100% 100%;
+  background-position: 0px 0px, 0px 0px, 0px 0px;
+  background-image: radial-gradient(
+      27% 35% at 30% 98%,
+      #b1d7e1 14%,
+      #073aff00 100%
+    ),
+    radial-gradient(20% 27% at 69% 101%, #b1d7e1 14%, #073aff00 100%),
+    linear-gradient(125deg, #181c1f 1%, #181c1f 100%);
+  height: 100dvh;
+}
+
+/* customers - alice carousel */
+.alice-carousel__dots {
+    display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+    .integrations__container,
+    .visitor__container,
+    .gitBookAI__container,
+    .gitSYNC__container,
+    .publicDocs__container,
+    .internalDocs__container {
+        height: min-content;
+        padding: 2rem 1rem;
+    }
+}
