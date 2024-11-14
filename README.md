@@ -1,25 +1,26 @@
-# GitBook Frontend Clone
+# GitBook Clone - UI Only
 
-This project is a frontend clone of the GitBook website, created as part of a technical task assigned by **Chhirolya Technologies**.
+This project is a **UI-only clone** of **GitBook**, developed as per the task requirements from **Chirrolaya Company**. The goal was to recreate the essential layout and design of GitBook’s interface using **Bootstrap** for styling and **Alice Carousel** for interactive elements.
 
-## Project Overview
+## Features
 
-- **Objective**: Replicate the frontend of GitBook using **JavaScript** and **React.js** (optionally with **Next.js** for additional features).
-- **Assigned By**: Chhirolya Technologies
-- **Submission**: Push the completed project to the specified GitHub repository.
+- **Responsive Layout**: Adapts to different screen sizes for a consistent user experience across devices.
+- **Modern UI Components**: Includes a navigation sidebar, content editor section, header elements, and carousel for interactive navigation.
+- **Carousel Integration**: Utilizes Alice Carousel for smooth, swipeable carousel features.
+- **Clean, Minimalistic Design**: Styled with Bootstrap for a simple, user-friendly interface.
 
-## Getting Started
+## Technologies Used
 
-### Prerequisites
+- **Frontend**: React, Bootstrap, Alice Carousel
 
-- [Node.js](https://nodejs.org/) (v14 or later)
-- [Git](https://git-scm.com/)
-- Code editor (such as [VS Code](https://code.visualstudio.com/))
+## Installation
 
-### Setup
+1. **Clone the repository**:
 
-1. **Clone the repository:**
    ```bash
-   git clone <GitHub Repo URL>
-   cd gitbook-clone
+   git clone https://github.com/Godson2611/gitbook-clone.git
    ```
+
+## Screenshots
+
+![App Screenshot](/client/src/assets/Screenshot_gitbook_clone.jpeg)
